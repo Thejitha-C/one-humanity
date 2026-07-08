@@ -34,6 +34,117 @@
     </header>
 
     <main class="section-container section-animate" style="padding-top: 0;">
+
+        <!-- DASHBOARD ROW: School Info & Progress Ring -->
+        <div class="dashboard-row">
+            <!-- School Details Card -->
+            <div class="school-info-card">
+                <span class="label-text">The School</span>
+                <h3>Eswaththa Pandukabaya Maha Vidyalaya</h3>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-icon">👥</span>
+                        <div class="stat-details">
+                            <span class="stat-label">Total Students</span>
+                            <span class="stat-value">118</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">📍</span>
+                        <div class="stat-details">
+                            <span class="stat-label">Location</span>
+                            <span class="stat-value">Awissawella</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Progress Ring Card -->
+            <div class="progress-ring-card">
+                <span class="label-text">Project Completion</span>
+                <div class="circular-progress" style="background: conic-gradient(#3b82f6 83%, rgba(255,255,255,0.05) 83%);">
+                    <div class="inner-circle">83%</div>
+                </div>
+                <p style="margin-top: 15px; font-size: 0.85rem; color: #888;">5 of 6 milestones</p>
+            </div>
+        </div>
+
+        <!-- PAYMENT TRACKER CARD -->
+        <div class="tracker-card">
+            <span class="label-text">Transparency</span>
+            <h2 style="color: #EDEDED; margin-bottom: 10px;">Monthly Wi-Fi Payment Tracker</h2>
+            <p>We publish our connectivity payments openly. Click on any month below to toggle it between Paid and Pending — the completion bar updates live.</p>
+
+            <div class="tracker-status-bar">
+                <div class="tracker-header">
+                    <h3 id="payment-status-text">0 of 6 months paid · Rs 0 collected</h3>
+                    <span id="payment-percentage" class="percentage-text">0%</span>
+                </div>
+                <div class="progress-track">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+                <p class="tracker-note">Rs 1,500 / month · Data is stored locally in your browser.</p>
+            </div>
+
+            <!-- 6 Month Grid (July 2026 to Dec 2026) -->
+            <div class="months-grid">
+                
+                <button class="month-btn pending" onclick="togglePayment(this)">
+                    <div class="month-header">
+                        <span>Jul 2026</span>
+                        <span class="status-icon">🕒</span>
+                    </div>
+                    <span class="month-status">PENDING</span>
+                    <span class="month-amount">Rs 1,500</span>
+                </button>
+
+                <button class="month-btn pending" onclick="togglePayment(this)">
+                    <div class="month-header">
+                        <span>Aug 2026</span>
+                        <span class="status-icon">🕒</span>
+                    </div>
+                    <span class="month-status">PENDING</span>
+                    <span class="month-amount">Rs 1,500</span>
+                </button>
+
+                <button class="month-btn pending" onclick="togglePayment(this)">
+                    <div class="month-header">
+                        <span>Sep 2026</span>
+                        <span class="status-icon">🕒</span>
+                    </div>
+                    <span class="month-status">PENDING</span>
+                    <span class="month-amount">Rs 1,500</span>
+                </button>
+
+                <button class="month-btn pending" onclick="togglePayment(this)">
+                    <div class="month-header">
+                        <span>Oct 2026</span>
+                        <span class="status-icon">🕒</span>
+                    </div>
+                    <span class="month-status">PENDING</span>
+                    <span class="month-amount">Rs 1,500</span>
+                </button>
+
+                <button class="month-btn pending" onclick="togglePayment(this)">
+                    <div class="month-header">
+                        <span>Nov 2026</span>
+                        <span class="status-icon">🕒</span>
+                    </div>
+                    <span class="month-status">PENDING</span>
+                    <span class="month-amount">Rs 1,500</span>
+                </button>
+
+                <button class="month-btn pending" onclick="togglePayment(this)">
+                    <div class="month-header">
+                        <span>Dec 2026</span>
+                        <span class="status-icon">🕒</span>
+                    </div>
+                    <span class="month-status">PENDING</span>
+                    <span class="month-amount">Rs 1,500</span>
+                </button>
+
+            </div>
+        </div>
         
         <!-- Glassmorphism Content Panels -->
         <article class="about-card" style="max-width: 900px; text-align: left; margin-bottom: 30px;">
