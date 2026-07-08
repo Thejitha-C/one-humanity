@@ -3,29 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UPLINK | One Humanity</title>
+    <title>UPLINK Project | One Humanity</title>
+    <!-- Importing 'Inter' font for a premium UI look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>UPLINK PROJECT</h1>
-        <p>Prepared by: One Humanity | kncgunathiaka@students.nsbm.ac.lk[cite: 2]</p>
+    <!-- Premium Blurred Navigation -->
+    <nav class="navbar">
+        <a href="index.html" style="text-decoration: none;">
+            <div class="nav-brand">
+                <img src="image_3a93b9.jpg" alt="Logo" class="nav-logo">
+                One Humanity
+            </div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#about">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Subpage Hero Section -->
+    <header class="hero section-animate" style="min-height: 40vh; padding-top: 150px; padding-bottom: 50px;">
+        <div class="hero-badge">Project Initiative</div>
+        <h1 class="hero-title" style="font-size: 3.5rem;">UPLINK PROJECT</h1>
+        <p class="hero-subtitle">Prepared by: One Humanity | kncgunathiaka@students.nsbm.ac.lk[cite: 2]</p>
     </header>
 
-    <main class="content-container">
+    <main class="section-container section-animate" style="padding-top: 0;">
         
-        <section>
-            <h2>The Digital Divide (SDG 10)</h2>
+        <!-- Glassmorphism Content Panels -->
+        <article class="about-card" style="max-width: 900px; text-align: left; margin-bottom: 30px;">
+            <h2 style="margin-bottom: 15px; color: #EDEDED;">The Digital Divide (SDG 10)</h2>
             <p>Our focus is on the United Nations Sustainable Development Goal 10: "Reduced Inequalities"[cite: 2]. The digital divide refers to the unequal access to information and communication technologies[cite: 2]. According to recent data, only 18.6% of schools in Sri Lanka had internet access for educational purposes in 2019[cite: 2]. By providing a reliable Wi-Fi connection to Eswaththa Pandukabhaya Maha Vidyalaya in Awissawella, we aim to ensure that students have equal access to online learning sources[cite: 2].</p>
-        </section>
+        </article>
 
-        <section>
-            <h2>Partners & Sponsors</h2>
+        <article class="about-card" style="max-width: 900px; text-align: left; margin-bottom: 30px;">
+            <h2 style="margin-bottom: 15px; color: #EDEDED;">Partners & Sponsors</h2>
             <p>In collaboration with Group O (Project 50:50), this project takes a comprehensive approach[cite: 2]. While Project 50:50 focuses on SDG 5 (Gender Equality) and provides a computer and a table, ONE HUMANITY (Group G) focuses on SDG 10 (Reduced Inequalities) by supplying a chair and a Wi-Fi router[cite: 2]. Together, these contributions will establish a functional digital learning station[cite: 2].</p>
-        </section>
+        </article>
 
-        <section>
-            <h2>Budget Proposal</h2>
+        <article class="about-card" style="max-width: 900px; text-align: left; margin-bottom: 30px;">
+            <h2 style="margin-bottom: 15px; color: #EDEDED;">Budget Proposal</h2>
             <table>
                 <thead>
                     <tr>
@@ -56,19 +78,19 @@
                     </tr>
                 </tbody>
             </table>
-        </section>
+        </article>
 
-        <section>
-            <h2>Progress & Photo Gallery</h2>
+        <article class="about-card" style="max-width: 900px; text-align: left; margin-bottom: 30px;">
+            <h2 style="margin-bottom: 15px; color: #EDEDED;">Progress & Photo Gallery</h2>
             <p>Documenting our fundraising and implementation journey. (Day 1 and Day 2 progress).</p>
             <div class="photo-gallery">
                 <img src="WhatsApp Image 2026-07-09 at 00.32.04.jpg" alt="Day 1 - Selling roses for fundraising">
                 <img src="WhatsApp Image 2026-07-09 at 00.32.21.jpg" alt="Day 2 - Giving a white rose">
             </div>
-        </section>
+        </article>
 
-        <section>
-            <h2>The People Behind the Project</h2>
+        <article class="about-card" style="max-width: 900px; text-align: left; margin-bottom: 50px;">
+            <h2 style="margin-bottom: 15px; color: #EDEDED;">The People Behind the Project</h2>
             <table>
                 <thead>
                     <tr>
@@ -91,11 +113,15 @@
                     <tr><td>Nimnadi K G M[cite: 2]</td><td>38090[cite: 2]</td></tr>
                 </tbody>
             </table>
-        </section>
+        </article>
 
         <div style="text-align: center;">
-            <a href="index.html" class="btn">Back to Home</a>
+            <a href="index.html" class="btn btn-primary">Back to Home</a>
         </div>
     </main>
+
+    <footer>
+        <p>&copy; 2026 One Humanity. All rights reserved.</p>
+    </footer>
 </body>
 </html>
