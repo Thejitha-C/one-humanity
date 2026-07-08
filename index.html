@@ -7,26 +7,71 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <img src="image_3a93b9.jpg" alt="One Humanity Logo" class="logo">
-        <h1>One Humanity</h1>
-        <p>One World. One People. One Future.</p>
+    <!-- Sticky Glassmorphism Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">One Humanity</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Animated Hero Section -->
+    <header id="home" class="hero section-animate">
+        <img src="image_3a93b9.jpg" alt="One Humanity Logo" class="hero-logo">
+        <h1 class="gradient-text">One Humanity</h1>
+        <p class="subtitle">One World. One People. One Future.</p>
+        <a href="#projects" class="btn btn-primary">Explore Our Projects</a>
     </header>
 
-    <main class="project-container">
-        <!-- Project 1: School Wi-Fi -->
-        <div class="card">
-            <h3>School Wi-Fi Initiative</h3>
-            <p><strong>Mission:</strong> To reduce digital inequality by providing rural classrooms with the routers, connectivity, and digital literacy skills needed to thrive in a modern world.</p>
-            <a href="uplink.html" class="btn">View Project</a>
+    <!-- Projects Section -->
+    <section id="projects" class="section-container section-animate">
+        <h2 class="section-title">Our Initiatives</h2>
+        <div class="project-grid">
+            
+            <!-- Project 1: School Wi-Fi -->
+            <div class="card">
+                <h3>School Wi-Fi Initiative</h3>
+                <p>To reduce digital inequality by providing rural classrooms with the routers, connectivity, and digital literacy skills needed to thrive in a modern world[cite: 1].</p>
+                <a href="uplink.html" class="btn btn-outline">View Project &rarr;</a>
+            </div>
+            
+            <!-- Project 2: Vegetable Seeds -->
+            <div class="card">
+                <h3>Vegetable Seed Distribution</h3>
+                <p>To reduce inequalities by distributing vegetable seeds to underserved communities, promoting food security and self-sufficiency[cite: 1].</p>
+                <a href="seeds.html" class="btn btn-outline">View Project &rarr;</a>
+            </div>
+
         </div>
-        
-        <!-- Project 2: Vegetable Seeds -->
-        <div class="card">
-            <h3>Vegetable Seed Distribution</h3>
-            <p><strong>Mission:</strong> To reduce inequalities by distributing vegetable seeds to underserved communities, promoting food security and self-sufficiency[cite: 1].</p>
-            <a href="seeds.html" class="btn">View Project</a>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section-container section-animate">
+        <h2 class="section-title">About Us</h2>
+        <div class="about-content">
+            <p>We are <strong>Batch 25.2</strong>, operating as <strong>One Humanity (Group G)</strong>. Our mission is rooted in the United Nations Sustainable Development Goal 10 (SDG 10): Reduced Inequalities.</p>
+            <p>We believe that no individual should be left behind due to their economic, social, or geographic circumstances. Through targeted, community-driven projects, we aim to bridge the gap in digital education and food security, creating equal opportunities for all.</p>
         </div>
-    </main>
+    </section>
+
+    <!-- Contact Section with Instagram -->
+    <section id="contact" class="section-container section-animate">
+        <h2 class="section-title">Connect With Us</h2>
+        <p style="margin-bottom: 30px;">Follow our journey and stay updated on our latest project milestones.</p>
+        <div class="contact-links">
+            <a href="https://www.instagram.com/onehumanity25.2?igsh=YXY1emV4N3BlZnFy" target="_blank" class="btn btn-instagram">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px; vertical-align: middle;"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                Follow us on Instagram
+            </a>
+            <a href="mailto:kncgunathiaka@students.nsbm.ac.lk" class="btn btn-outline">Email Us</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 One Humanity. All rights reserved.</p>
+    </footer>
 </body>
 </html>
