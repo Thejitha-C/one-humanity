@@ -208,5 +208,44 @@
     <footer>
         <p>&copy; 2026 One Humanity. All rights reserved.</p>
     </footer>
+    <!-- Interactive Payment Tracker Logic -->
+    <script>
+        const totalMonths = 6;
+        const monthlyCost = 1500;
+
+        function togglePayment(button) {
+            // Toggle the classes between paid and pending
+            if (button.classList.contains('pending')) {
+                button.classList.remove('pending');
+                button.classList.add('paid');
+                button.querySelector('.month-status').textContent = 'PAID';
+                button.querySelector('.status-icon').textContent = '✓'; // Green check
+            } else {
+                button.classList.remove('paid');
+                button.classList.add('pending');
+                button.querySelector('.month-status').textContent = 'PENDING';
+                button.querySelector('.status-icon').textContent = '🕒'; // Clock icon
+            }
+            
+            updateTracker();
+        }
+
+        function updateTracker() {
+            // Count how many buttons have the 'paid' class
+            const paidCount = document.querySelectorAll('.month-btn.paid').length;
+            const collectedAmount = paidCount * monthlyCost;
+            const percentage = Math.round((paidCount / totalMonths) * 100);
+
+            // Update Text
+            document.getElementById('payment-status-text').innerHTML = `${paidCount} of ${totalMonths} months paid &middot; Rs ${collectedAmount.toLocaleString()} collected`;
+            document.getElementById('payment-percentage').textContent = `${percentage}%`;
+            
+            // Update Progress Bar
+            document.getElementById('progress-fill').style.width = `${percentage}%`;
+        }
+
+        // Run once on page load to set initial state to 0%
+        updateTracker();
+    </script>
 </body>
 </html>
