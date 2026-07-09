@@ -10,8 +10,8 @@ html {
 }
 
 body {
-    background-color: #050505; /* Softer black */
-    color: #A1A1AA; /* Ash grey for less eye-strain */
+    background-color: #0b0726; /* Deep Midnight Blue from reference */
+    color: #a7a8d1; /* Soft purple-grey for less eye-strain */
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
@@ -20,7 +20,7 @@ body {
 
 /* Typography refinements */
 h1, h2, h3 {
-    color: #EDEDED;
+    color: #ffffff; /* Crisp white */
     font-weight: 500;
     letter-spacing: -0.03em; /* Tighter letter spacing looks modern */
 }
@@ -34,7 +34,7 @@ h1, h2, h3 {
     justify-content: space-between;
     align-items: center;
     padding: 15px 50px;
-    background: rgba(5, 5, 5, 0.6);
+    background: rgba(11, 7, 38, 0.6); /* Tinted to match new background */
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -45,7 +45,7 @@ h1, h2, h3 {
     display: flex;
     align-items: center;
     gap: 12px;
-    color: #EDEDED;
+    color: #ffffff;
     font-size: 1.1rem;
     font-weight: 500;
     letter-spacing: -0.02em;
@@ -65,7 +65,7 @@ h1, h2, h3 {
 }
 
 .nav-links a {
-    color: #888888;
+    color: #a7a8d1;
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 400;
@@ -73,7 +73,7 @@ h1, h2, h3 {
 }
 
 .nav-links a:hover {
-    color: #FFFFFF;
+    color: #d946ef; /* Neon Pink hover */
 }
 
 /* Sleek Hero Section */
@@ -85,17 +85,17 @@ h1, h2, h3 {
     align-items: center;
     text-align: center;
     padding: 120px 20px 0;
-    /* Added a very subtle purple/pink hue to the top background glow */
-    background: radial-gradient(circle at top center, rgba(147, 51, 234, 0.15) 0%, #050505 60%);
+    /* Deep purple glow from the reference image */
+    background: radial-gradient(circle at top center, rgba(139, 92, 246, 0.25) 0%, #0b0726 60%);
 }
 
 .hero-badge {
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.3); /* Purple tinted border */
     padding: 6px 16px;
     border-radius: 99px;
     font-size: 0.85rem;
-    color: #A1A1AA;
+    color: #a7a8d1;
     margin-bottom: 25px;
     letter-spacing: 0.5px;
 }
@@ -105,8 +105,8 @@ h1, h2, h3 {
     line-height: 1.1;
     font-weight: 500;
     margin-bottom: 25px;
-    /* Soft white to pink gradient for the main title */
-    background: linear-gradient(180deg, #FFFFFF 0%, #F472B6 100%);
+    /* Crisp white fading into soft purple-grey */
+    background: linear-gradient(180deg, #ffffff 0%, #a7a8d1 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -114,7 +114,7 @@ h1, h2, h3 {
 .hero-subtitle {
     font-size: 1.15rem;
     font-weight: 300;
-    color: #888888;
+    color: #a7a8d1;
     max-width: 550px;
     margin-bottom: 40px;
 }
@@ -129,7 +129,7 @@ h1, h2, h3 {
 .section-title {
     font-size: 1.8rem;
     font-weight: 500;
-    color: #EDEDED;
+    color: #ffffff;
     margin-bottom: 40px;
     text-align: center;
 }
@@ -159,11 +159,10 @@ h1, h2, h3 {
 
 .card:hover {
     background: rgba(255, 255, 255, 0.03);
-    /* Subtle pink border on hover */
-    border-color: rgba(229, 36, 115, 0.3);
+    /* Neon pink glowing border on hover */
+    border-color: rgba(217, 70, 239, 0.4);
     transform: translateY(-4px);
-    /* Soft pink/purple glow instead of heavy black */
-    box-shadow: 0 20px 40px rgba(229, 36, 115, 0.08);
+    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.15);
 }
 
 .card-icon {
@@ -179,15 +178,14 @@ h1, h2, h3 {
 .card p {
     font-size: 0.95rem;
     font-weight: 300;
-    color: #888888;
+    color: #a7a8d1;
     margin-bottom: 30px;
     flex-grow: 1;
 }
 
 .card-action {
     font-size: 0.9rem;
-    /* Soft Pink for links */
-    color: #F472B6;
+    color: #d946ef; /* Neon Pink */
     font-weight: 400;
     display: flex;
     align-items: center;
@@ -207,7 +205,7 @@ h1, h2, h3 {
 
 .about-card p {
     font-weight: 300;
-    color: #A1A1AA;
+    color: #a7a8d1;
     margin-bottom: 20px;
 }
 
@@ -226,29 +224,28 @@ h1, h2, h3 {
 }
 
 .btn-primary {
-    /* SDG 10 Pink to Purple Gradient */
-    background: linear-gradient(135deg, #E52473 0%, #9333EA 100%);
+    /* Reference Image Gradient: Purple to Pink */
+    background: linear-gradient(90deg, #8b5cf6 0%, #d946ef 100%);
     color: #FFFFFF;
     border: none;
 }
 
 .btn-primary:hover {
-    /* Lighter pink/purple on hover with a soft glow */
-    background: linear-gradient(135deg, #F472B6 0%, #A855F7 100%);
+    background: linear-gradient(90deg, #a855f7 0%, #f472b6 100%);
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(229, 36, 115, 0.2);
+    box-shadow: 0 10px 20px rgba(217, 70, 239, 0.3);
 }
 
 .btn-outline {
     background-color: transparent;
-    color: #EDEDED;
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border: 1px solid rgba(217, 70, 239, 0.4);
 }
 
 .btn-outline:hover {
-    background-color: rgba(255, 255, 255, 0.05);
-    border-color: rgba(229, 36, 115, 0.4);
-    color: #F472B6;
+    background-color: rgba(217, 70, 239, 0.1);
+    border-color: #d946ef;
+    color: #d946ef;
 }
 
 .btn-instagram {
@@ -264,7 +261,7 @@ h1, h2, h3 {
 
 .contact-subtitle {
     font-weight: 300;
-    color: #888888;
+    color: #a7a8d1;
     margin-bottom: 30px;
 }
 
@@ -280,7 +277,7 @@ footer {
     padding: 30px;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     font-size: 0.85rem;
-    color: #666666;
+    color: #a7a8d1;
     font-weight: 300;
 }
 
@@ -297,10 +294,10 @@ footer {
 /* Ensures tables and galleries on other pages inherit the softer look */
 table { width: 100%; border-collapse: collapse; margin-top: 20px; font-weight: 300; font-size: 0.95rem; }
 th, td { padding: 15px; text-align: left; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
-th { font-weight: 500; color: #EDEDED; }
+th { font-weight: 500; color: #ffffff; }
 .photo-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 30px; }
 .photo-gallery img { width: 100%; height: 280px; object-fit: cover; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05); transition: transform 0.3s ease; }
-.photo-gallery img:hover { transform: scale(1.03); border-color: rgba(229, 36, 115, 0.3); }
+.photo-gallery img:hover { transform: scale(1.03); border-color: rgba(217, 70, 239, 0.4); }
 
 /* Dashboard & School Stats Layout */
 .dashboard-row {
@@ -337,8 +334,7 @@ th { font-weight: 500; color: #EDEDED; }
     font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 1px;
-    /* Changed to Soft Pink */
-    color: #F472B6; 
+    color: #0ea5e9; /* Neon Cyan accent from reference image */
     text-transform: uppercase;
     margin-bottom: 15px;
     display: block;
@@ -374,14 +370,14 @@ th { font-weight: 500; color: #EDEDED; }
 
 .stat-label {
     font-size: 0.75rem;
-    color: #888888;
+    color: #a7a8d1;
     text-transform: uppercase;
     font-weight: 500;
 }
 
 .stat-value {
     font-size: 1.1rem;
-    color: #EDEDED;
+    color: #ffffff;
     font-weight: 600;
 }
 
@@ -390,8 +386,8 @@ th { font-weight: 500; color: #EDEDED; }
     width: 130px;
     height: 130px;
     border-radius: 50%;
-    /* SDG 10 Pink gradient for the ring */
-    background: conic-gradient(#E52473 83%, rgba(255,255,255,0.05) 83%);
+    /* Neon Pink gradient for the ring */
+    background: conic-gradient(#d946ef 83%, rgba(255,255,255,0.05) 83%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -403,13 +399,13 @@ th { font-weight: 500; color: #EDEDED; }
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: #050505;
+    background-color: #0b0726; /* Matches the new Midnight background */
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
     font-weight: 600;
-    color: #EDEDED;
+    color: #ffffff;
 }
 
 /* Payment Tracker Layout */
@@ -445,8 +441,7 @@ th { font-weight: 500; color: #EDEDED; }
 .percentage-text {
     font-size: 1.2rem;
     font-weight: 600;
-    /* Soft Pink for the percentage text */
-    color: #F472B6; 
+    color: #d946ef; /* Neon Pink */
 }
 
 .progress-track {
@@ -460,8 +455,8 @@ th { font-weight: 500; color: #EDEDED; }
 
 .progress-fill {
     height: 100%;
-    /* Pink to Purple Gradient for the progress bar */
-    background: linear-gradient(90deg, #E52473 0%, #9333EA 100%);
+    /* Purple to Pink Gradient for the progress bar */
+    background: linear-gradient(90deg, #8b5cf6 0%, #d946ef 100%);
     width: 0%; /* Updates via JS */
     border-radius: 10px;
     transition: width 0.4s ease;
@@ -469,7 +464,7 @@ th { font-weight: 500; color: #EDEDED; }
 
 .tracker-note {
     font-size: 0.85rem;
-    color: #888888;
+    color: #a7a8d1;
     margin: 0;
 }
 
@@ -491,7 +486,7 @@ th { font-weight: 500; color: #EDEDED; }
     display: flex;
     flex-direction: column;
     gap: 5px;
-    color: #EDEDED;
+    color: #ffffff;
     font-family: 'Inter', sans-serif;
 }
 
@@ -515,10 +510,10 @@ th { font-weight: 500; color: #EDEDED; }
 
 .month-amount {
     font-size: 0.9rem;
-    color: #888888;
+    color: #a7a8d1;
 }
 
-/* Toggle States - Kept Orange for pending and Green for paid as it's best for user experience */
+/* Toggle States - Kept Orange for pending and Green for paid */
 .month-btn.pending .month-status {
     color: #F59E0B; /* Amber for pending */
 }
