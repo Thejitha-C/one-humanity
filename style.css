@@ -15,14 +15,14 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
-    -webkit-font-smoothing: antialiased; /* Makes text look sharper and thinner */
+    -webkit-font-smoothing: antialiased; 
 }
 
 /* Typography refinements */
 h1, h2, h3 {
-    color: #ffffff; /* Crisp white */
+    color: #ffffff; 
     font-weight: 500;
-    letter-spacing: -0.03em; /* Tighter letter spacing looks modern */
+    letter-spacing: -0.03em; 
 }
 
 /* Premium Blurred Navigation */
@@ -34,7 +34,7 @@ h1, h2, h3 {
     justify-content: space-between;
     align-items: center;
     padding: 15px 50px;
-    background: rgba(11, 7, 38, 0.6); /* Tinted to match new background */
+    background: rgba(11, 7, 38, 0.6); 
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -76,6 +76,12 @@ h1, h2, h3 {
     color: #d946ef; /* Neon Pink hover */
 }
 
+/* ANIMATION 1: Breathing Background Glow */
+@keyframes pulseBg {
+    0% { background: radial-gradient(circle at top center, rgba(139, 92, 246, 0.15) 0%, #0b0726 60%); }
+    100% { background: radial-gradient(circle at top center, rgba(217, 70, 239, 0.25) 0%, #0b0726 65%); }
+}
+
 /* Sleek Hero Section */
 .hero {
     min-height: 90vh;
@@ -85,13 +91,13 @@ h1, h2, h3 {
     align-items: center;
     text-align: center;
     padding: 120px 20px 0;
-    /* Deep purple glow from the reference image */
     background: radial-gradient(circle at top center, rgba(139, 92, 246, 0.25) 0%, #0b0726 60%);
+    animation: pulseBg 6s ease-in-out infinite alternate; /* Applies breathing glow */
 }
 
 .hero-badge {
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(139, 92, 246, 0.3); /* Purple tinted border */
+    border: 1px solid rgba(139, 92, 246, 0.3); 
     padding: 6px 16px;
     border-radius: 99px;
     font-size: 0.85rem;
@@ -100,15 +106,23 @@ h1, h2, h3 {
     letter-spacing: 0.5px;
 }
 
+/* ANIMATION 2: Text Shimmer Effect */
+@keyframes shineText {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}
+
 .hero-title {
     font-size: 4.5rem;
     line-height: 1.1;
     font-weight: 500;
     margin-bottom: 25px;
-    /* Crisp white fading into soft purple-grey */
-    background: linear-gradient(180deg, #ffffff 0%, #a7a8d1 100%);
+    /* Shimmering white to pink gradient */
+    background: linear-gradient(to right, #ffffff 20%, #a7a8d1 40%, #d946ef 60%, #ffffff 80%);
+    background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: shineText 6s linear infinite; /* Applies the shimmer */
 }
 
 .hero-subtitle {
@@ -159,7 +173,6 @@ h1, h2, h3 {
 
 .card:hover {
     background: rgba(255, 255, 255, 0.03);
-    /* Neon pink glowing border on hover */
     border-color: rgba(217, 70, 239, 0.4);
     transform: translateY(-4px);
     box-shadow: 0 20px 40px rgba(139, 92, 246, 0.15);
@@ -185,7 +198,7 @@ h1, h2, h3 {
 
 .card-action {
     font-size: 0.9rem;
-    color: #d946ef; /* Neon Pink */
+    color: #d946ef; 
     font-weight: 400;
     display: flex;
     align-items: center;
@@ -221,13 +234,33 @@ h1, h2, h3 {
     font-weight: 500;
     border-radius: 8px;
     transition: all 0.2s ease;
+    border: none;
+}
+
+/* ANIMATION 3: Sweeping Button Light */
+@keyframes buttonSweep {
+    0% { left: -100%; }
+    20% { left: 200%; }
+    100% { left: 200%; }
 }
 
 .btn-primary {
-    /* Reference Image Gradient: Purple to Pink */
     background: linear-gradient(90deg, #8b5cf6 0%, #d946ef 100%);
     color: #FFFFFF;
     border: none;
+    position: relative;
+    overflow: hidden; /* Contains the light sweep */
+}
+
+/* This creates the shiny sweep effect on the button */
+.btn-primary::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 50%; height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+    transform: skewX(-20deg);
+    animation: buttonSweep 3s infinite;
 }
 
 .btn-primary:hover {
@@ -281,7 +314,7 @@ footer {
     font-weight: 300;
 }
 
-/* Subtle Loading Animation */
+/* Page Load Animation */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(15px); }
     to { opacity: 1; transform: translateY(0); }
@@ -291,7 +324,7 @@ footer {
     animation: fadeIn 0.8s ease-out forwards;
 }
 
-/* Ensures tables and galleries on other pages inherit the softer look */
+/* Tables and Galleries */
 table { width: 100%; border-collapse: collapse; margin-top: 20px; font-weight: 300; font-size: 0.95rem; }
 th, td { padding: 15px; text-align: left; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
 th { font-weight: 500; color: #ffffff; }
@@ -334,7 +367,7 @@ th { font-weight: 500; color: #ffffff; }
     font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 1px;
-    color: #0ea5e9; /* Neon Cyan accent from reference image */
+    color: #0ea5e9; 
     text-transform: uppercase;
     margin-bottom: 15px;
     display: block;
@@ -386,7 +419,6 @@ th { font-weight: 500; color: #ffffff; }
     width: 130px;
     height: 130px;
     border-radius: 50%;
-    /* Neon Pink gradient for the ring */
     background: conic-gradient(#d946ef 83%, rgba(255,255,255,0.05) 83%);
     display: flex;
     align-items: center;
@@ -399,7 +431,7 @@ th { font-weight: 500; color: #ffffff; }
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: #0b0726; /* Matches the new Midnight background */
+    background-color: #0b0726; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -441,7 +473,7 @@ th { font-weight: 500; color: #ffffff; }
 .percentage-text {
     font-size: 1.2rem;
     font-weight: 600;
-    color: #d946ef; /* Neon Pink */
+    color: #d946ef; 
 }
 
 .progress-track {
@@ -455,9 +487,8 @@ th { font-weight: 500; color: #ffffff; }
 
 .progress-fill {
     height: 100%;
-    /* Purple to Pink Gradient for the progress bar */
     background: linear-gradient(90deg, #8b5cf6 0%, #d946ef 100%);
-    width: 0%; /* Updates via JS */
+    width: 0%; 
     border-radius: 10px;
     transition: width 0.4s ease;
 }
@@ -515,7 +546,7 @@ th { font-weight: 500; color: #ffffff; }
 
 /* Toggle States - Kept Orange for pending and Green for paid */
 .month-btn.pending .month-status {
-    color: #F59E0B; /* Amber for pending */
+    color: #F59E0B; 
 }
 .month-btn.pending .status-icon {
     color: #F59E0B;
@@ -526,7 +557,7 @@ th { font-weight: 500; color: #ffffff; }
     background: rgba(16, 185, 129, 0.05);
 }
 .month-btn.paid .month-status {
-    color: #10B981; /* Emerald green for paid */
+    color: #10B981; 
 }
 .month-btn.paid .status-icon {
     color: #10B981;
