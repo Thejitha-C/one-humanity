@@ -76,10 +76,10 @@ h1, h2, h3 {
     color: #d946ef; /* Neon Pink hover */
 }
 
-/* ANIMATION 1: Breathing Background Glow */
-@keyframes pulseBg {
-    0% { background: radial-gradient(circle at top center, rgba(139, 92, 246, 0.15) 0%, #0b0726 60%); }
-    100% { background: radial-gradient(circle at top center, rgba(217, 70, 239, 0.25) 0%, #0b0726 65%); }
+/* ANIMATION 1: Breathing Background Glow (Fixed for all browsers) */
+@keyframes pulseGlow {
+    0% { opacity: 0.4; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.2); }
 }
 
 /* Sleek Hero Section */
@@ -91,8 +91,21 @@ h1, h2, h3 {
     align-items: center;
     text-align: center;
     padding: 120px 20px 0;
-    background: radial-gradient(circle at top center, rgba(139, 92, 246, 0.25) 0%, #0b0726 60%);
-    animation: pulseBg 6s ease-in-out infinite alternate; /* Applies breathing glow */
+    position: relative; /* Needed for the glow layer */
+    z-index: 1;
+}
+
+/* This is the new, smooth breathing glow layer */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -20%; left: 0; right: 0;
+    height: 100%;
+    /* Bright pink/purple radial gradient */
+    background: radial-gradient(circle at top center, rgba(217, 70, 239, 0.35) 0%, transparent 60%);
+    z-index: -1;
+    pointer-events: none;
+    animation: pulseGlow 4s ease-in-out infinite alternate; /* Smooth fading and scaling */
 }
 
 .hero-badge {
@@ -544,7 +557,6 @@ th { font-weight: 500; color: #ffffff; }
     color: #a7a8d1;
 }
 
-/* Toggle States - Kept Orange for pending and Green for paid */
 .month-btn.pending .month-status {
     color: #F59E0B; 
 }
